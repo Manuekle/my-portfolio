@@ -202,7 +202,7 @@ function Base() {
     <>
       <div className="bg-[#242424] w-full h-full">
         {/* Navigation */}
-        <div className="fixed top-0 bottom-0 right-0 flex justify-start items-center p-4 flex-col gap-2">
+        <div className="fixed z-20 top-0 left-0 justify-end items-end right-0 flex p-4 flex-col gap-2 backdrop-blur-sm xl:backdrop-blur-none bg-black/30 xl:bg-transparent">
           {/* <Lang /> */}
           <div className="flex flex-row gap-2">
             {/* <h1></h1> */}
