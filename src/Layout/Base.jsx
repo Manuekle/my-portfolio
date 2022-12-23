@@ -7,8 +7,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useRef } from 'react';
 import { AnimatePresence, motion, useCycle } from 'framer-motion';
-
+import i18next from 'i18next';
 import emailjs from '@emailjs/browser';
+import { eng } from '../Components/i18n/en';
+import { esp } from '../Components/i18n/es';
+
 import Locate from '../assets/icons/Locate';
 import Linkedin from '../assets/icons/Linkedin';
 import Twitter from '../assets/icons/Twitter';
@@ -20,6 +23,7 @@ import Close from '../assets/Close';
 import Mail from '../assets/Mail';
 import User from '../assets/User';
 import Rocket from '../assets/Rocket';
+import OpenNew from '../assets/OpenNew';
 
 import Loader from '../Components/Loader';
 import Delete from '../Components/Delete';
@@ -96,7 +100,31 @@ import Vercel from '../assets/icons/Vercel';
 function Base() {
   const [formData, setFormData] = useState(false);
 
+  const [language, setLanguage] = useState('en');
+
+  i18next.init({
+    interpolation: { escapeValue: false },
+    lng: language,
+    resources: {
+      en: {
+        translation: eng
+      },
+      es: {
+        translation: esp
+      }
+    }
+  });
+
   const [open, setOpen] = useState(false);
+
+  const [showPokedex, setShowPokedex] = useState(false);
+  const [showSensor, setShowSensor] = useState(false);
+  const [showCountry, setShowCountry] = useState(false);
+  const [showCiber, setShowCiber] = useState(false);
+
+  // const handleFocus = () => {
+  //   console.log('focus');
+  // };
 
   const [showDoc1, setShowDoc1] = useCycle(false, true);
   const [showDoc2, setShowDoc2] = useCycle(false, true);
@@ -174,9 +202,26 @@ function Base() {
     <>
       <div className="bg-[#242424] w-full h-full">
         {/* Navigation */}
-        {/* <div className="fixed top-0 bottom-0 right-0 flex justify-center items-center p-4 flex-col gap-2">
-        <h1 className="border">Nav</h1>
-      </div> */}
+        <div className="fixed top-0 bottom-0 right-0 flex justify-start items-center p-4 flex-col gap-2">
+          {/* <Lang /> */}
+          <div className="flex flex-row gap-2">
+            {/* <h1></h1> */}
+            <button
+              className="border border-zinc-600 text-white text-sm rounded-md px-2 py-1"
+              type="button"
+              onClick={() => setLanguage('en')}
+            >
+              {i18next.t('english')}
+            </button>
+            <button
+              className="border border-zinc-600 text-white text-sm rounded-md px-2 py-1"
+              type="button"
+              onClick={() => setLanguage('es')}
+            >
+              {i18next.t('spanish')}
+            </button>
+          </div>
+        </div>
         {/* Content */}
         <section className="container mx-auto xl:px-64 xl:py-24 grid px-8 py-24 xl:gap-44 gap-24">
           {/* Header */}
@@ -204,7 +249,7 @@ function Base() {
                   Manuel Esteban Erazo Medina
                 </h1>
                 <h1 className="text-md xl:text-lg font-normal text-white tracking-normal capitalize">
-                  Desarrollador Web Full Stack
+                  {i18next.t('subtitle')}
                 </h1>
               </span>
               <span className="flex flex-row gap-2 items-center">
@@ -244,82 +289,81 @@ function Base() {
             <section className="col-span-2 xl:col-span-1">
               {/* Presentation */}
               <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide">
-                Presentación
+                {/* Presentación */}
+                {i18next.t('presentation')}
               </h1>
               <p className="text-[#9B9B9B] text-sm mt-4 xl:w-96 w-full">
-                Soy una persona que disfruta trabajando en entornos dinámicos y
+                {/* Soy una persona que disfruta trabajando en entornos dinámicos y
                 en contacto con el público, capaz de trabajar en equipo y de
                 forma independiente según las necesidades, con lo cual tengo la
                 capacidad para aprender y aplicar mis conocimientos en el ámbito
-                profesional.
+                profesional. */}
+                {i18next.t('text1')}
               </p>
               <p className="text-[#9B9B9B] text-sm mt-4 xl:w-96 w-full">
-                En busca de una oportunidad laboral en la que desarrollar mis
+                {/* En busca de una oportunidad laboral en la que desarrollar mis
                 habilidades y adquirir experiencia, además de ofrecer todo mi
-                esfuerzo.
+                esfuerzo. */}
+                {i18next.t('text2')}
               </p>
               <p className="text-[#9B9B9B] text-sm mt-4 xl:w-96 w-full">
-                Me especializo en diseñar sitio web con el fin de mejorar la
-                experiencia de usuario, crear sitios dinamicos y responsivos,
-                sin embarfo me esfuerzo por garantizar la satisfacción del
-                cliente en todo momento.
+                {/* Me especializo en diseñar sitio web con el fin de mejorar la
+                experiencia de usuario, crear sitios dinámicos y responsivos,
+                sin embargo me esfuerzo por garantizar la satisfacción del
+                cliente en todo momento. */}
+                {i18next.t('text3')}
               </p>
               {/* Lenguages */}
               <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide mt-12">
-                Idiomas
+                {/* Idiomas */}
+                {i18next.t('languages')}
               </h1>
               <div className="text-white text-sm py-2">
                 <h1>
-                  <black className="font-bold">Español Nativo</black> /{' '}
-                  <black className="font-bold">Inglés Basico</black>
+                  <black className="font-bold">{i18next.t('l1')}</black> /{' '}
+                  <black className="font-bold">{i18next.t('l2')}</black>
                 </h1>
               </div>
               {/* About me */}
               <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide mt-12">
-                Datos interesantes sobre mi
+                {/* Datos interesantes sobre mi */}
+                {i18next.t('about')}
               </h1>
               <div className="flex flex-col gap-4 mt-4 xl:w-96 w-full ">
                 <span className="flex flex-col gap-1">
                   <h1 className="text-white text-sm underline">
-                    #Ciberseguridad
+                    #{i18next.t('cybersecurity')}
                   </h1>
-                  <p className="text-[#9B9B9B] text-sm">
-                    Me encanta la ciberseguridad, aprender sobre
-                    vulnerabilidades y como evitarlas.
-                  </p>
+                  <p className="text-[#9B9B9B] text-sm">{i18next.t('tag1')}</p>
                 </span>
                 <span className="flex flex-col gap-1">
                   <h1 className="text-white text-sm underline">
-                    #Instrumentos
+                    #{i18next.t('instruments')}
                   </h1>
-                  <p className="text-[#9B9B9B] text-sm">
-                    Toco ocasionalmente la guitarra, me gusta tocar canciones de
-                    rock.
-                  </p>
+                  <p className="text-[#9B9B9B] text-sm">{i18next.t('tag2')}</p>
                 </span>
                 <span className="flex flex-col gap-1">
-                  <h1 className="text-white text-sm underline">#Cocina</h1>
-                  <p className="text-[#9B9B9B] text-sm">
-                    Me gusta cocinar, ver videos de cocina y aprender nuevas
-                    recetas.
-                  </p>
+                  <h1 className="text-white text-sm underline">
+                    #{i18next.t('cook')}
+                  </h1>
+                  <p className="text-[#9B9B9B] text-sm">{i18next.t('tag3')}</p>
                 </span>
                 <span className="flex flex-col gap-1">
-                  <h1 className="text-white text-sm underline">#Futbol</h1>
-                  <p className="text-[#9B9B9B] text-sm">
-                    Soy un apasionado del futbol, me gusta verlo y jugarlo, mi
-                    equipo favorito es el FC Barcelona.
-                  </p>
+                  <h1 className="text-white text-sm underline">
+                    #{i18next.t('football')}
+                  </h1>
+                  <p className="text-[#9B9B9B] text-sm">{i18next.t('tag4')}</p>
                 </span>
               </div>
             </section>
             <section className="col-span-2 xl:col-span-1">
               <h1 className="capitalize text-white text-xl xl:text-3xl w-full tracking-wide">
-                Tecnologías y herramientas
+                {/* Tecnologías y herramientas */}
+                {i18next.t('technologies')}
               </h1>
               {/* Like */}
               <div className="text-white text-sm py-2">
-                <h1>Prefiero trabajar con</h1>
+                <h1>{i18next.t('t1')}</h1>
                 <hr className="border border-zinc-600 w-12" />
               </div>
               <div className="grid xl:grid-cols-6 grid-cols-5 gap-6 mt-4 xl:w-96 w-full">
@@ -459,8 +503,11 @@ function Base() {
               {/* Don't Like */}
               <div className="text-white text-sm py-2 mt-4">
                 <h1>
-                  Prefiero <block className="text-sm font-bold">NO</block>{' '}
-                  trabajar con
+                  {i18next.t('t2')}{' '}
+                  <block className="text-sm font-bold">
+                    {i18next.t('t21')}
+                  </block>{' '}
+                  {i18next.t('t22')}
                 </h1>
                 <hr className="border border-zinc-600 w-12" />
               </div>
@@ -508,7 +555,7 @@ function Base() {
               </div>
               {/* Learning */}
               <div className="text-white text-sm py-2 mt-4">
-                <h1>Estoy aprendiendo </h1>
+                <h1>{i18next.t('t3')}</h1>
                 <hr className="border border-zinc-600 w-12" />
               </div>
               <div className="grid xl:grid-cols-6 grid-cols-5 gap-6 mt-4 xl:w-96 w-full">
@@ -563,25 +610,26 @@ function Base() {
               </div>
               {/* Habilities */}
               <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide mt-12 mb-4">
-                Mis Habilidades
+                {/* Mis Habilidades */}
+                {i18next.t('habilities')}
               </h1>
               <div className="flex flex-col gap-4">
                 <span className="flex flex-row gap-2 items-center">
                   <Learn className="w-10 h-10 fill-white" />
                   <h1 className="text-white text-sm font-bold">
-                    Aprendizaje Rápido
+                    {i18next.t('h1')}
                   </h1>
                 </span>
                 <span className="flex flex-row gap-2 items-center">
                   <Team className="w-10 h-10 fill-white" />
                   <h1 className="text-white text-sm font-bold">
-                    Trabajo en Equipo
+                    {i18next.t('h2')}
                   </h1>
                 </span>
                 <span className="flex flex-row gap-2 items-center">
                   <Idea className="w-10 h-10 fill-white" />
                   <h1 className="text-white text-sm font-bold">
-                    Ideas Innovadoras y Creativas
+                    {i18next.t('h3')}
                   </h1>
                 </span>
               </div>
@@ -837,8 +885,25 @@ function Base() {
                   <img
                     src={sensor}
                     alt="sensor"
-                    className="object-cover w-full"
+                    className="object-cover w-full h-full"
                   />
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowSensor(true)}
+                    onMouseLeave={() => setShowSensor(false)}
+                    animate={{ opacity: showSensor ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      <a
+                        href="https://github.com/orgs/project-iot-fup/repositories"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                    </span>
+                  </motion.div>
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
@@ -875,15 +940,32 @@ function Base() {
                   <img
                     src={pokemon}
                     alt="pokemon"
-                    className="object-cover w-full"
+                    className="object-cover w-full h-full"
                   />
-                  <a
-                    href="https://github.com/Manuekle/pokedex"
-                    target="_blank"
-                    rel="noreferrer"
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowPokedex(true)}
+                    onMouseLeave={() => setShowPokedex(false)}
+                    animate={{ opacity: showPokedex ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    <Github className="w-5 h-5 fill-zinc-300 absolute top-2 right-2 hover:fill-black" />
-                  </a>
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      <a
+                        href="https://github.com/Manuekle/pokedex"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                      <a
+                        href="https://pokedex-apiv2.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <OpenNew className="fill-white hover:fill-zinc-300" />
+                      </a>
+                    </span>
+                  </motion.div>
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
@@ -914,15 +996,32 @@ function Base() {
                   <img
                     src={country}
                     alt="country"
-                    className="object-cover w-full"
+                    className="object-cover w-full h-full"
                   />
-                  <a
-                    href="https://github.com/Manuekle/countryAngular"
-                    target="_blank"
-                    rel="noreferrer"
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowCountry(true)}
+                    onMouseLeave={() => setShowCountry(false)}
+                    animate={{ opacity: showCountry ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    <Github className="w-5 h-5 fill-zinc-300 absolute top-2 right-2 hover:fill-black" />
-                  </a>
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      <a
+                        href="https://github.com/Manuekle/countryAngular"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                      <a
+                        href="https://country-angular.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <OpenNew className="fill-white hover:fill-zinc-300" />
+                      </a>
+                    </span>
+                  </motion.div>
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
@@ -953,15 +1052,32 @@ function Base() {
                   <img
                     src={pishing}
                     alt="pishing"
-                    className="object-cover w-full"
+                    className="object-cover w-full h-full"
                   />
-                  <a
-                    href="https://github.com/Manuekle/phishing"
-                    target="_blank"
-                    rel="noreferrer"
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowCiber(true)}
+                    onMouseLeave={() => setShowCiber(false)}
+                    animate={{ opacity: showCiber ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    <Github className="w-5 h-5 fill-zinc-300 absolute top-2 right-2 hover:fill-black" />
-                  </a>
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      <a
+                        href="https://github.com/Manuekle/phishing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                      <a
+                        href="https://phishing-fup.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <OpenNew className="fill-white hover:fill-zinc-300" />
+                      </a>
+                    </span>
+                  </motion.div>
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
