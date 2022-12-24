@@ -647,7 +647,7 @@ function Base() {
           {/* Work Experience */}
           <div className="grid-cols-2 flex flex-col gap-4">
             <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide">
-              Experiencia Laboral
+              {i18next.t('experience')}
             </h1>
             <section className="border border-zinc-600 flex xl:flex-row flex-col gap-4 rounded-md overflow-hidden p-8 w-full">
               <figure className="flex justify-center items-start xl:w-44 w-full">
@@ -656,42 +656,35 @@ function Base() {
               <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
-                    Desarrollo de Software en Entornos Web
+                    {i18next.t('e1')}
                   </h1>
                   <h1 className="text-xs xl:text-sm font-normal">
-                    FRABRICA DE SOFTWARE{' '}
+                    {i18next.t('es1')}{' '}
                     <strong className="text-[#9B9B9B]">
-                      (1 Mayo 2021 - 1 Noviembre 2021)
+                      {i18next.t('es2')}
                     </strong>
                   </h1>
                 </span>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  Este proyecto es un sistema de gestión de la dirección de
-                  formación profesional del sena, donde se manejan los procesos
-                  de las dependencias del sena a nivel nacional, entre ellas
-                  bienestar al aprendiz, ENI, SENNOVA, Egresados, entre otras.
-                  Dentro de este ámbito laboral me destaque en las siguientes:
+                  {i18next.t('te')}
                 </p>
                 <li className="text-zinc-300 text-sm capitalize text-justify">
-                  bases de datos.
+                  {i18next.t('dte1')}
                 </li>
                 <li className="text-zinc-300 text-sm capitalize text-justify">
-                  Api Rest
+                  {i18next.t('dte2')}
                 </li>
                 <li className="text-zinc-300 text-sm capitalize text-justify">
-                  Creación de sitios web funcionales y fáciles de usar.
+                  {i18next.t('dte3')}
                 </li>
                 <li className="text-zinc-300 text-sm capitalize text-justify">
-                  Diseño y producción de los contenidos de la página para
-                  cumplir con los requisitos del proyecto y satisfacer las
-                  necesidades del cliente.
+                  {i18next.t('dte4')}
                 </li>
                 <li className="text-zinc-300 text-sm capitalize text-justify">
-                  Diseño y Rediseñó de sitios web para mejorar la navegación y
-                  su atractivo visual.
+                  {i18next.t('dte5')}
                 </li>
                 <h1 className="text-sm xl:text-md font-normal text-white">
-                  Tecnologías utilizadas:{' '}
+                  {i18next.t('tu')}
                 </h1>
                 <span className="grid xl:grid-cols-12 grid-cols-4 xl:gap-1 gap-3 mt-2 xl:w-96">
                   <Html className="w-5 h-5 fill-zinc-300" />
@@ -713,7 +706,7 @@ function Base() {
           {/* Education */}
           <div className="grid-cols-2 flex flex-col gap-4">
             <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide">
-              Educación
+              {i18next.t('education')}
             </h1>
             <section className="border border-zinc-600 flex xl:flex-row flex-col gap-4 rounded-md overflow-hidden p-8 w-full">
               <figure className="flex justify-center items-start xl:w-40 w-full">
@@ -722,23 +715,20 @@ function Base() {
               <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
-                    Tecnólogo en Análisis y Desarrollo de Sistemas de
-                    Información
+                    {i18next.t('ed1')}
                   </h1>
                   <h1 className="text-xs xl:text-sm font-normal">
-                    SENA CTPI{' '}
+                    {i18next.t('ed2')}{' '}
                     <strong className="text-[#9B9B9B]">
-                      (29 Agosto 2019 - 28 Junio 2021)
+                      {i18next.t('ed3')}
                     </strong>
                   </h1>
                 </span>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  Estudie un tecnólogo en análisis y desarrollo de sistemas de
-                  información, donde aprendí a desarrollar software, crear bases
-                  de datos, crear sitios web, entre otras cosas.
+                  {i18next.t('edt1')}
                 </p>
                 <h1 className="text-sm xl:text-md font-normal text-white">
-                  Me destaque en las siguientes Tecnologías:
+                  {i18next.t('edt2')}
                 </h1>
                 <span className="grid xl:grid-cols-12 grid-cols-4 xl:gap-1 gap-3 mt-2 xl:w-96">
                   <Python className="w-5 h-5 fill-zinc-300" />
@@ -758,21 +748,19 @@ function Base() {
               <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
-                    Ingeniería de Sistemas
+                    {i18next.t('ed4')}
                   </h1>
                   <h1 className="text-xs xl:text-sm font-normal">
-                    FUP{' '}
+                    {i18next.t('ed5')}{' '}
                     <strong className="text-[#9B9B9B]">
-                      (28 Febrero 2022 - CURSANDO)
+                      {i18next.t('ed6')}
                     </strong>
                   </h1>
                 </span>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  Actualmente estoy cursando el 6to semestre de la carrera de
-                  Ingeniería de Sistemas.
+                  {i18next.t('edt3')}
                   <br />
-                  Me encantan las matemáticas y la programación, por lo que
-                  decidí estudiar esta carrera.
+                  {i18next.t('edt4')}
                 </p>
               </div>
             </section>
@@ -780,7 +768,7 @@ function Base() {
           {/* Certificados */}
           <div className="grid-cols-2 flex flex-col gap-4">
             <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide">
-              Certificados
+              {i18next.t('certificates')}
             </h1>
             <section className="border border-zinc-600 flex xl:flex-row flex-col gap-4 rounded-md overflow-hidden p-8 w-full">
               <figure className="flex justify-center items-start xl:w-40 w-full">
@@ -793,29 +781,20 @@ function Base() {
               <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
-                    XV ENCUENTRO DEPARTAMENTAL DE SEMILLEROS DE INVESTIGACIÓN
+                    {i18next.t('c1')}
                   </h1>
                   <h1 className="text-xs xl:text-sm font-normal">
-                    EDESI 2021{' '}
+                    {i18next.t('c2')}{' '}
                     <strong className="text-[#9B9B9B]">
-                      (8 al 10 de septiembre de 2021)
+                      {i18next.t('c3')}
                     </strong>
                   </h1>
                 </span>
                 <h1 className="text-zinc-300 font-bold text-sm xl:w-[60em] w-full text-justify">
-                  DESARROLLO DE UN PROTOTIPO PARA LA MEDICIÓN Y ALERTA TEMPRANA
-                  DE PARÁMETROS FISICOQUÍMICOS DEL AGUA POR TELEMETRÍA PARA
-                  ACUEDUCTOS RURALES
+                  {i18next.t('ct1')}
                 </h1>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  Este proyecto fue propuesto por el Centro de teleinformática y
-                  producción industrial por el liderazgo del programa Análisis y
-                  desarrollo de Sistemas de Información por el semillero de
-                  investigación Cread+ y con la participación de los programas
-                  de control ambiental, agua instalamento básico, gestión de
-                  redes de datos, diseño e integración de automatismos
-                  mecatrónicos e ilustración para contenidos audiovisuales
-                  digitales.
+                  {i18next.t('ct2')}
                 </p>
                 <span className="flex flex-col justify-center xl:px-0 px-12">
                   <button
@@ -823,7 +802,7 @@ function Base() {
                     onClick={setShowDoc1}
                     className="xl:w-44 w-full text-zinc-300 font-bold tracking-wide text-sm border border-zinc-600 rounded-full p-2 bg-[#3A3A3A] hover:bg-[#484848] hover:text-white transition duration-300 ease-in-out"
                   >
-                    Ver certificado
+                    {i18next.t('cb1')}
                   </button>
                 </span>
               </div>
@@ -839,28 +818,23 @@ function Base() {
               <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
-                    SENASOFT DISTRITO CAPITAL 2020
+                    {i18next.t('c4')}
                   </h1>
                   <h1 className="text-xs xl:text-sm font-normal">
-                    SENA CTPI{' '}
+                    {i18next.t('c5')}{' '}
                     <strong className="text-[#9B9B9B]">
-                      (5 al 9 Septiembre de 2020)
+                      {i18next.t('c6')}
                     </strong>
                   </h1>
                 </span>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  SENASOFT es el mayor encuentro de tecnología que realiza
-                  anualmente el Servicio Nacional de Aprendizaje (SENA), como
-                  iniciativa de la Red de Conocimiento en Informática, Diseño y
-                  Desarrollo de Software.
+                  {i18next.t('ct3')}
                 </p>
                 <p className="text-zinc-300 text-sm xl:w-[60em] w-full text-justify">
-                  Se desarrollo durante 3 dias un aplicacion web para la gestion
-                  de datos para entidad medica(EPS), la cual nos permitira
-                  asignar citas medicas a los pacientes registrados.
+                  {i18next.t('ct4')}
                 </p>
                 <h1 className="text-sm xl:text-md font-normal text-white">
-                  Tecnologías utilizadas:{' '}
+                  {i18next.t('cb2')}:{' '}
                 </h1>
                 <span className="grid xl:grid-cols-12 grid-cols-4 xl:gap-1 gap-3 mt-2 xl:w-96">
                   <Python className="w-5 h-5 fill-zinc-300" />
@@ -877,7 +851,7 @@ function Base() {
                     onClick={setShowDoc2}
                     className="xl:w-44 w-full text-zinc-300 font-bold tracking-wide text-sm border border-zinc-600 rounded-full p-2 bg-[#3A3A3A] hover:bg-[#484848] hover:text-white transition duration-300 ease-in-out"
                   >
-                    Ver certificado
+                    {i18next.t('cb1')}
                   </button>
                 </span>
               </div>
@@ -886,7 +860,7 @@ function Base() {
           {/* Proyectos */}
           <div className="grid-cols-2 flex flex-col gap-4">
             <h1 className="capitalize text-white text-xl xl:text-3xl tracking-wide">
-              Mis Proyectos
+              {i18next.t('projects')}
             </h1>
             <section className="grid grid-cols-3 gap-4 w-full">
               <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
@@ -921,17 +895,12 @@ function Base() {
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
                   >
-                    Sistema de Ingreso y Asistencia Mediante Sensores 📡
+                    {i18next.t('p1')}
                   </a>
                 </h1>
-                <p className="text-sm text-zinc-300">
-                  Este proyecto es una aplicación web que permite el registro de
-                  asistencia de los estudiantes de la Fundación Universitaria de
-                  Popayán, mediante el uso de un sensor RFID y una Raspberry Pi
-                  3.
-                </p>
+                <p className="text-sm text-zinc-300">{i18next.t('p2')}</p>
                 <div>
-                  <h1 className="text-sm text-white">Teconologias</h1>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
                   <span className="flex flex-row gap-4 mt-2">
                     <Aws className="w-5 h-5 fill-zinc-300" />
                     <Postgresql className="w-5 h-5 fill-zinc-300" />
@@ -983,15 +952,12 @@ function Base() {
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
                   >
-                    PokeApi
+                    {i18next.t('p3')}
                   </a>
                 </h1>
-                <p className="text-sm text-zinc-300">
-                  Esta es una aplicación web que consume la API de Pokemón, para
-                  mostrar información de los pokemones.
-                </p>
+                <p className="text-sm text-zinc-300">{i18next.t('p4')}</p>
                 <div>
-                  <h1 className="text-sm text-white">Teconologias</h1>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
                   <span className="flex flex-row gap-4 mt-2">
                     <Javascript className="w-5 h-5 fill-zinc-300" />
                     <ReactIcon className="w-5 h-5 fill-zinc-300" />
@@ -1039,15 +1005,12 @@ function Base() {
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
                   >
-                    Country Api
+                    {i18next.t('p5')}
                   </a>
                 </h1>
-                <p className="text-sm text-zinc-300">
-                  Esta es una aplicación web que consume la API de paises, para
-                  mostrar información de los paises.
-                </p>
+                <p className="text-sm text-zinc-300">{i18next.t('p6')}</p>
                 <div>
-                  <h1 className="text-sm text-white">Teconologias</h1>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
                   <span className="flex flex-row gap-4 mt-2">
                     <Angular className="w-5 h-5 fill-zinc-300" />
                     <Bootstrap className="w-5 h-5 fill-zinc-300" />
@@ -1095,15 +1058,12 @@ function Base() {
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
                   >
-                    Taller de Phishing
+                    {i18next.t('p7')}
                   </a>
                 </h1>
-                <p className="text-sm text-zinc-300">
-                  Taller de Phishing realizado para el curso de seguridad
-                  informática del semillero de investigación SENTINEL.
-                </p>
+                <p className="text-sm text-zinc-300">{i18next.t('p8')}</p>
                 <div>
-                  <h1 className="text-sm text-white">Teconologias</h1>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
                   <span className="flex flex-row gap-4 mt-2">
                     <ReactIcon className="w-5 h-5 fill-zinc-300" />
                     <Tailwind className="w-5 h-5 fill-zinc-300" />
@@ -1120,17 +1080,17 @@ function Base() {
                 rel="noreferrer"
                 className="text-white text-sm border px-4 py-2 rounded-md border-zinc-600 hover:bg-black/30 transition duration-300 ease-in-out"
               >
-                Ver más proyectos
+                {i18next.t('show')}
               </a>
             </div>
           </div>
         </section>
         <footer className="bg-black/30 py-8 flex justify-center">
           <span className="flex flex-col gap-2 items-center text-sm">
-            <h1 className="text-white">© Todos los derechos reservados</h1>
+            <h1 className="text-white">© {i18next.t('f1')}</h1>
             <h1 className="text-white">
-              Hecho con mucho <span className="text-red-500">❤</span> y moviendo
-              las manitas
+              {i18next.t('f2')} <span className="text-red-500">❤</span>{' '}
+              {i18next.t('f3')}
             </h1>
           </span>
         </footer>
