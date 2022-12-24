@@ -95,12 +95,13 @@ import Jwt from '../assets/icons/Jwt';
 import Arduino from '../assets/icons/Arduino';
 import Raspberry from '../assets/icons/Raspberry';
 import Vercel from '../assets/icons/Vercel';
+import Translate from '../assets/Translate';
 // import Mysql from '../assets/icons/Mysql';
 
 function Base() {
   const [formData, setFormData] = useState(false);
 
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('es');
 
   i18next.init({
     interpolation: { escapeValue: false },
@@ -116,6 +117,10 @@ function Base() {
   });
 
   const [open, setOpen] = useState(false);
+
+  const toggleSwitch = () => {
+    setLanguage(language === 'es' ? 'en' : 'es');
+  };
 
   const [showPokedex, setShowPokedex] = useState(false);
   const [showSensor, setShowSensor] = useState(false);
@@ -204,23 +209,27 @@ function Base() {
         {/* Navigation */}
         <div className="fixed z-20 top-0 left-0 justify-end items-end right-0 flex p-4 flex-col gap-2 backdrop-blur-sm xl:backdrop-blur-none bg-black/30 xl:bg-transparent">
           {/* <Lang /> */}
-          <div className="flex flex-row gap-2">
-            {/* <h1></h1> */}
-            <button
-              className="border border-zinc-600 text-white text-sm rounded-md px-2 py-1"
-              type="button"
-              onClick={() => setLanguage('en')}
+
+          <button
+            type="button"
+            onClick={toggleSwitch}
+            className={
+              language === 'es'
+                ? 'border border-zinc-600 text-white text-sm rounded-md px-2 py-1 flex flex-row gap-2 items-center justify-center bg-zinc-900'
+                : 'border border-zinc-600 text-white text-sm rounded-md px-2 py-1 flex flex-row gap-2 items-center justify-center bg-zinc-900'
+            }
+          >
+            <span>
+              <Translate className="w-4 h-4" />
+            </span>
+            <motion.div
+              layout
+              whileTap={{ scale: 1.1 }}
+              animate={{ scale: 1.2 }}
             >
-              {i18next.t('english')}
-            </button>
-            <button
-              className="border border-zinc-600 text-white text-sm rounded-md px-2 py-1"
-              type="button"
-              onClick={() => setLanguage('es')}
-            >
-              {i18next.t('spanish')}
-            </button>
-          </div>
+              {language === 'es' ? <h1>🇪🇸</h1> : <h1>🇺🇸</h1>}
+            </motion.div>
+          </button>
         </div>
         {/* Content */}
         <section className="container mx-auto xl:px-64 xl:py-24 grid px-8 py-24 xl:gap-44 gap-24">
