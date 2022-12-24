@@ -1160,7 +1160,7 @@ function Base() {
                         <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
                       </a>
                       <a
-                        href="geo-weather-seven.vercel.app"
+                        href="https://geo-weather-seven.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                       >
