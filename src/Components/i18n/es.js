@@ -99,5 +99,15 @@ export const esp = {
   // footer
   f1: 'Todos los derechos reservados',
   f2: 'Hecho con mucho',
-  f3: 'y moviendo las manitas'
+  f3: 'y moviendo las manitas',
+  // modalMail
+  m1: '¿Quieres contactar?',
+  m2: 'Enviame un correo',
+  name: 'Nombre',
+  email: 'Correo',
+  subject: 'Asunto',
+  message: 'Mensaje',
+  send: 'Enviar',
+  // modalDocs
+  md: 'Vista previa del documento'
 };

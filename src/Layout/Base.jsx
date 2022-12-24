@@ -1111,7 +1111,7 @@ function Base() {
               <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full rounded-md xl:p-8 p-0 xl:w-auto xl:px-0 px-6 flex flex-col gap-2">
                 <span className="flex flex-row gap-4 justify-between items-center w-full">
                   <h1 className="text-white/80 w-full xl:text-sm text-xs">
-                    Vista previa del documento
+                    {i18next.t('md')}
                   </h1>
                   <button
                     type="button"
@@ -1148,7 +1148,7 @@ function Base() {
               <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full rounded-md xl:p-8 p-0 xl:w-auto xl:px-0 px-6 flex flex-col gap-2">
                 <span className="flex flex-row gap-4 justify-between items-center w-full">
                   <h1 className="text-white/80 w-full xl:text-sm text-xs">
-                    Vista previa del documento
+                    {i18next.t('md')}
                   </h1>
                   <button
                     type="button"
@@ -1185,7 +1185,7 @@ function Base() {
               <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full rounded-md xl:p-8 p-0 xl:w-auto xl:px-0 px-6 flex flex-col gap-2">
                 <span className="flex flex-row gap-4 justify-between items-center w-full">
                   <h1 className="text-white/80 w-full xl:text-sm text-xs">
-                    ¿Quieres contactar? Enviame un correo
+                    {i18next.t('m1')} {i18next.t('m2')}
                   </h1>
                   <button
                     type="button"
@@ -1208,7 +1208,7 @@ function Base() {
                           name="name"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          placeholder="Nombre"
+                          placeholder={i18next.t('name')}
                           className="relative pl-11 w-full bg-[#3A3A3A] placeholder:text-white/80 text-white rounded-md px-4 py-2 text-sm font-normal outline-none"
                         />
                         <User className="absolute top-1/2 left-3 transform -translate-y-1/2 fill-white/80" />
@@ -1221,7 +1221,7 @@ function Base() {
                           name="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          placeholder="Correo Electronico"
+                          placeholder={i18next.t('email')}
                           className="relative pl-11 w-full bg-[#3A3A3A] placeholder:text-white/80 text-white rounded-md px-4 py-2 text-sm font-normal outline-none"
                         />
                         <Mail className="absolute top-1/2 left-3 transform -translate-y-1/2 fill-white/80" />
@@ -1234,7 +1234,7 @@ function Base() {
                           name="subject"
                           value={subject}
                           onChange={(e) => setSubject(e.target.value)}
-                          placeholder="Asunto"
+                          placeholder={i18next.t('subject')}
                           className="relative pl-11 w-full bg-[#3A3A3A] placeholder:text-white/80 text-white rounded-md px-4 py-2 text-sm font-normal outline-none"
                         />
                         <Rocket className="absolute top-1/2 left-3 transform -translate-y-1/2 fill-white/80" />
@@ -1250,7 +1250,7 @@ function Base() {
                           name="message"
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
-                          placeholder="Mensaje"
+                          placeholder={i18next.t('message')}
                           cols="30"
                           rows="6"
                         />
@@ -1263,13 +1263,13 @@ function Base() {
                             <input
                               type="submit"
                               disabled
-                              value="Enviar"
+                              value={i18next.t('send')}
                               className="cursor-no-drop xl:w-44 w-full text-zinc-300 font-bold tracking-wide text-sm border border-zinc-600 rounded-full p-2 bg-[#3A3A3A]"
                             />
                           ) : (
                             <input
                               type="submit"
-                              value="Enviar"
+                              value={i18next.t('send')}
                               className="cursor-pointer xl:w-44 w-full text-zinc-300 font-bold tracking-wide text-sm border border-zinc-600 rounded-full p-2 bg-[#3A3A3A] hover:bg-[#484848] hover:text-white transition duration-300 ease-in-out"
                             />
                           )}

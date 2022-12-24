@@ -98,5 +98,15 @@ export const eng = {
   // footer
   f1: 'All rights reserved',
   f2: 'Made with a lot',
-  f3: 'and moving the hands'
+  f3: 'and moving the hands',
+  // modalMail
+  m1: 'Do you want to contact?',
+  m2: 'Send me an email',
+  name: 'Name',
+  email: 'Email',
+  subject: 'Subject',
+  message: 'Message',
+  send: 'Send',
+  // modalDocs
+  md: 'Document preview'
 };
