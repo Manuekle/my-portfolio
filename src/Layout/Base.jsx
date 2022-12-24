@@ -1152,23 +1152,23 @@ function Base() {
                     transition={{ duration: 0.5 }}
                   >
                     <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
-                      {/* <a
-                        href="https://github.com/Manuekle/phishing"
+                      <a
+                        href="https://github.com/Manuekle/GeoWeather"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
                       </a>
                       <a
-                        href="https://phishing-fup.vercel.app/"
+                        href="geo-weather-seven.vercel.app"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <OpenNew className="fill-white hover:fill-zinc-300" />
-                      </a> */}
-                      <h1 className="text-white text-sm">
+                      </a>
+                      {/* <h1 className="text-white text-sm">
                         {i18next.t('soon')}
-                      </h1>
+                      </h1> */}
                     </span>
                   </motion.div>
                 </figure>
