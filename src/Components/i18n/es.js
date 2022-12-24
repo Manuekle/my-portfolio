@@ -85,15 +85,20 @@ export const esp = {
   // ...
   projects: 'Mis Proyectos',
   pt: 'Teconologias',
+  soon: 'Proximamente',
   // p1
   p1: 'Sistema de Ingreso y Asistencia Mediante Sensores 📡',
   p2: 'Este proyecto es una aplicación web que permite el registro de asistencia de los estudiantes de la Fundación Universitaria de Popayán, mediante el uso de un sensor RFID y una Raspberry Pi 3.',
-  p3: 'PokeApi',
+  p3: 'Pokemón Api',
   p4: 'Esta es una aplicación web que consume la API de Pokemón, para mostrar información de los pokemones.',
-  p5: 'Country Api',
+  p5: 'Api De Paises',
   p6: 'Esta es una aplicación web que consume la API de paises, para mostrar información de los paises.',
   p7: 'Taller de Phishing',
   p8: 'Taller realizado para el curso de seguridad informática del semillero de investigación SENTINEL.',
+  p9: 'World Cup Qattar 2022',
+  p10: 'Esta es una aplicación web que consume la API de fútbol para mostrar información sobre la copa del mundo.',
+  p11: 'Api Meteorológica',
+  p12: 'Esta es una aplicación web que consume la API meteorológica para mostrar información meteorológica.',
   show: 'Ver más proyectos',
   // ...
   // footer

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable no-undef */
 /* eslint-disable prefer-regex-literals */
@@ -126,6 +127,8 @@ function Base() {
   const [showSensor, setShowSensor] = useState(false);
   const [showCountry, setShowCountry] = useState(false);
   const [showCiber, setShowCiber] = useState(false);
+  const [showQattar, setShowQattar] = useState(false);
+  const [showWeather, setShowWeather] = useState(false);
 
   // const handleFocus = () => {
   //   console.log('focus');
@@ -195,13 +198,19 @@ function Base() {
     'https://i0.wp.com/tensei-shinai.com/wp-content/uploads/2022/05/pokeapi-1.png?fit=640%2C360&ssl=1';
 
   const country =
-    'https://repository-images.githubusercontent.com/510533740/ba4bcf2d-2397-49e7-92c5-f85c1e312cbb';
+    'https://repository-images.githubusercontent.com/393506201/fb2ead61-3333-4b3d-9ff3-b2609cea784d';
 
   const pishing =
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJFygUDODKtz6vnhIz3GgBiIts8_POlqBfw&usqp=CAU';
 
   const sena =
     'https://lostramites.com.co/wp-content/uploads/logo-sena-fondo-naranja-300x300.jpg';
+
+  const qatar =
+    'https://e.rpp-noticias.io/normal/2022/10/15/141514_1330437.jpg';
+
+  const weather =
+    'https://miro.medium.com/max/1400/1*zeNkd44fybuuMSbz52NJvQ.png';
 
   return (
     <>
@@ -1068,6 +1077,118 @@ function Base() {
                     <ReactIcon className="w-5 h-5 fill-zinc-300" />
                     <Tailwind className="w-5 h-5 fill-zinc-300" />
                     <Supabase className="w-5 h-5 fill-zinc-300" />
+                    <Vercel className="w-5 h-5 fill-zinc-300" />
+                  </span>
+                </div>
+              </div>
+              <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
+                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
+                  <img
+                    src={qatar}
+                    alt="qatar"
+                    className="object-cover w-full h-full"
+                  />
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowQattar(true)}
+                    onMouseLeave={() => setShowQattar(false)}
+                    animate={{ opacity: showQattar ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      {/* <a
+                        href="https://github.com/Manuekle/phishing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                      <a
+                        href="https://phishing-fup.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <OpenNew className="fill-white hover:fill-zinc-300" />
+                      </a> */}
+                      <h1 className="text-white text-sm">
+                        {i18next.t('soon')}
+                      </h1>
+                    </span>
+                  </motion.div>
+                </figure>
+                <h1 className="text-sm xl:text-md font-bold text-white">
+                  <a
+                    href="#"
+                    // target="_blank"
+                    rel="noreferrer"
+                    className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
+                  >
+                    {i18next.t('p9')}
+                  </a>
+                </h1>
+                <p className="text-sm text-zinc-300">{i18next.t('p10')}</p>
+                <div>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
+                  <span className="flex flex-row gap-4 mt-2">
+                    <Javascript className="w-5 h-5 fill-zinc-300" />
+                    <ReactIcon className="w-5 h-5 fill-zinc-300" />
+                    <Tailwind className="w-5 h-5 fill-zinc-300" />
+                    <Vercel className="w-5 h-5 fill-zinc-300" />
+                  </span>
+                </div>
+              </div>
+              <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
+                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
+                  <img
+                    src={weather}
+                    alt="weather"
+                    className="object-cover w-full h-full"
+                  />
+                  <motion.div
+                    className="absolute w-full h-full hover:bg-gradient-to-t from-black/90 via-black/70 to-black/60 top-0 left-0 transition-opacity duration-1000 ease-out bg-opacity-50 hover:bg-opacity-100"
+                    onMouseEnter={() => setShowWeather(true)}
+                    onMouseLeave={() => setShowWeather(false)}
+                    animate={{ opacity: showWeather ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
+                      {/* <a
+                        href="https://github.com/Manuekle/phishing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
+                      </a>
+                      <a
+                        href="https://phishing-fup.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <OpenNew className="fill-white hover:fill-zinc-300" />
+                      </a> */}
+                      <h1 className="text-white text-sm">
+                        {i18next.t('soon')}
+                      </h1>
+                    </span>
+                  </motion.div>
+                </figure>
+                <h1 className="text-sm xl:text-md font-bold text-white">
+                  <a
+                    href="#"
+                    // target="_blank"
+                    rel="noreferrer"
+                    className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
+                  >
+                    {i18next.t('p11')}
+                  </a>
+                </h1>
+                <p className="text-sm text-zinc-300">{i18next.t('p12')}</p>
+                <div>
+                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
+                  <span className="flex flex-row gap-4 mt-2">
+                    <Javascript className="w-5 h-5 fill-zinc-300" />
+                    <ReactIcon className="w-5 h-5 fill-zinc-300" />
+                    <Tailwind className="w-5 h-5 fill-zinc-300" />
                     <Vercel className="w-5 h-5 fill-zinc-300" />
                   </span>
                 </div>

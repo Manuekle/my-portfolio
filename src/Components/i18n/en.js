@@ -85,15 +85,20 @@ export const eng = {
   // ...
   projects: 'My projects',
   pt: 'Technologies',
+  soon: 'Coming soon',
   // p1
   p1: 'Entry and Assistance System Using Sensors 📡',
   p2: 'This project is a web application that allows the registration of attendance of the students of the Fundación Universitaria de Popayán, through the use of an RFID sensor and a Raspberry Pi 3.',
-  p3: 'PokeApi',
+  p3: 'Pokemon Api',
   p4: 'This is a web application that consumes the Pokemon API, to display information about the pokemons.',
-  p5: 'Country Api',
+  p5: 'Countries Api',
   p6: 'This is a web application that consumes the countries API, to display country information.',
   p7: 'Phishing Workshop',
   p8: 'Workshop carried out for the computer security course of the SENTINEL research hotbed.',
+  p9: 'World Cup Qattar 2022',
+  p10: 'This is a web application that consumes the football API, to display information about the world cup.',
+  p11: 'Weather Api',
+  p12: 'This is a web application that consumes the weather API, to display weather information.',
   show: 'See more projects',
   // footer
   f1: 'All rights reserved',
