@@ -189,7 +189,9 @@ function Base() {
   };
 
   const img =
-    'https://i.pinimg.com/736x/b5/49/41/b5494197b2d462c940f88988b203d290.jpg';
+    'https://pbs.twimg.com/profile_images/1608569642468999170/T-UR9-vU_400x400.jpg';
+  // const img =
+  //   'https://i.pinimg.com/736x/b5/49/41/b5494197b2d462c940f88988b203d290.jpg';
 
   const sensor =
     'https://github.com/project-iot-fup/Documents/raw/main/img/1paso.jfif';
