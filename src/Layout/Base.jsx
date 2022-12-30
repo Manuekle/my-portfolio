@@ -664,7 +664,7 @@ function Base() {
               <figure className="flex justify-center items-start xl:w-44 w-full">
                 <img src={sena} alt="SENA" className="w-40 h-40 object-cover" />
               </figure>
-              <div className="xl:border border-none border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
+              <div className="border-none xl:border border-t-0 border-b-0 border-r-0 border-zinc-600 xl:pl-4 pl-0 flex flex-col gap-3">
                 <span className="text-white tracking-normal">
                   <h1 className="text-lg xl:text-xl font-normal">
                     {i18next.t('e1')}
