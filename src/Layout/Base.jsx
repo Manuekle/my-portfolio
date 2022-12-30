@@ -215,8 +215,8 @@ function Base() {
     'https://miro.medium.com/max/1400/1*zeNkd44fybuuMSbz52NJvQ.png';
 
   return (
-    <>
-      <div className="bg-[#242424] w-full h-full">
+    <section className="bg-[#242424] w-full h-full">
+      <div className="grid justify-center px-8 lg:px-64 xl:px-80">
         {/* Navigation */}
         <div className="fixed z-20 top-0 left-0 justify-end items-end right-0 flex p-4 flex-col gap-2 backdrop-blur-sm xl:backdrop-blur-none bg-black/30 xl:bg-transparent">
           {/* <Lang /> */}
@@ -243,7 +243,7 @@ function Base() {
           </button>
         </div>
         {/* Content */}
-        <section className="container mx-auto xl:px-64 xl:py-24 grid px-8 py-24 xl:gap-44 gap-24">
+        <section className="grid py-24 xl:gap-44 gap-24">
           {/* Header */}
           <div className="flex xl:flex-row flex-col gap-6 items-start">
             <article className="flex relative">
@@ -521,7 +521,7 @@ function Base() {
                 </span>
               </div>
               {/* Don't Like */}
-              <div className="text-white text-sm py-2 mt-4">
+              {/* <div className="text-white text-sm py-2 mt-4">
                 <h1>
                   {i18next.t('t2')}{' '}
                   <block className="text-sm font-bold">
@@ -530,8 +530,8 @@ function Base() {
                   {i18next.t('t22')}
                 </h1>
                 <hr className="border border-zinc-600 w-12" />
-              </div>
-              <div className="grid xl:grid-cols-6 grid-cols-5 gap-6 mt-4 xl:w-96 w-full">
+              </div> */}
+              {/* <div className="grid xl:grid-cols-6 grid-cols-5 gap-6 mt-4 xl:w-96 w-full">
                 <span className="flex flex-col gap-1 items-center">
                   <Vue className="w-5 h-5 fill-white" />
                   <h1 className="text-white text-xs">Vue</h1>
@@ -572,7 +572,7 @@ function Base() {
                   <Wordpress className="w-5 h-5 fill-white" />
                   <h1 className="text-white text-xs">Wordpress</h1>
                 </span>
-              </div>
+              </div> */}
               {/* Learning */}
               <div className="text-white text-sm py-2 mt-4">
                 <h1>{i18next.t('t3')}</h1>
@@ -1176,8 +1176,8 @@ function Base() {
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
-                    href="#"
-                    // target="_blank"
+                    href="https://geo-weather-seven.vercel.app/"
+                    target="_blank"
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
                   >
@@ -1208,16 +1208,16 @@ function Base() {
             </div>
           </div>
         </section>
-        <footer className="bg-black/30 py-8 flex justify-center">
-          <span className="flex flex-col gap-2 items-center text-sm">
-            <h1 className="text-white">© {i18next.t('f1')}</h1>
-            <h1 className="text-white">
-              {i18next.t('f2')} <span className="text-red-500">❤</span>{' '}
-              {i18next.t('f3')}
-            </h1>
-          </span>
-        </footer>
       </div>
+      <footer className="bg-black/30 py-8 flex justify-center">
+        <span className="flex flex-col gap-2 items-center text-sm">
+          <h1 className="text-white">© {i18next.t('f1')}</h1>
+          <h1 className="text-white">
+            {i18next.t('f2')} <span className="text-red-500">❤</span>{' '}
+            {i18next.t('f3')}
+          </h1>
+        </span>
+      </footer>
       <AnimatePresence exitBeforeEnter>
         <>
           {showDoc1 && (
@@ -1414,7 +1414,7 @@ function Base() {
           {open && <Delete open={open} setOpen={setOpen} />}
         </>
       </AnimatePresence>
-    </>
+    </section>
   );
 }
 
