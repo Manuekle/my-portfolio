@@ -1120,7 +1120,7 @@ function Base() {
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
-                    href="#"
+                    href=""
                     // target="_blank"
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
@@ -1162,7 +1162,7 @@ function Base() {
                         <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
                       </a>
                       <a
-                        href="https://geo-weather-seven.vercel.app/"
+                        href="https://geoweather.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -1176,7 +1176,7 @@ function Base() {
                 </figure>
                 <h1 className="text-sm xl:text-md font-bold text-white">
                   <a
-                    href="https://geo-weather-seven.vercel.app/"
+                    href="https://geoweather.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                     className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
