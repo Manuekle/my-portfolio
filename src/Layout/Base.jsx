@@ -189,7 +189,7 @@ function Base() {
   };
 
   const img =
-    'https://pbs.twimg.com/profile_images/1608569642468999170/T-UR9-vU_400x400.jpg';
+    'https://scontent.fbog10-1.fna.fbcdn.net/v/t39.30808-6/323698977_5503630156415284_729846346412372805_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=9Y2ynHRxVkMAX_VbXk3&_nc_ht=scontent.fbog10-1.fna&oh=00_AfC7ub4FUOiLBzXuHbspGnEeyzN-_P_A8VhOpuHJBkr95g&oe=63BB1EE3';
   // const img =
   //   'https://i.pinimg.com/736x/b5/49/41/b5494197b2d462c940f88988b203d290.jpg';
 
