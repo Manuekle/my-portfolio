@@ -13,6 +13,8 @@ import emailjs from '@emailjs/browser';
 import { eng } from '../Components/i18n/en';
 import { esp } from '../Components/i18n/es';
 
+import profile from '../assets/images/profile.jpg';
+
 import Locate from '../assets/icons/Locate';
 import Linkedin from '../assets/icons/Linkedin';
 import Twitter from '../assets/icons/Twitter';
@@ -260,7 +262,7 @@ function Base() {
                 }}
               />
               <figure className="relative bg-[#242424] rounded-full overflow-hidden border border-zinc-600 w-56 h-56">
-                <img src={img} alt="profile" />
+                <img src={profile} alt="profile" />
               </figure>
             </article>
             <article className="flex flex-col justify-between gap-6">
