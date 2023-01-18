@@ -13,7 +13,7 @@ import emailjs from '@emailjs/browser';
 import { eng } from '../Components/i18n/en';
 import { esp } from '../Components/i18n/es';
 
-import profile from '../assets/images/profile.jpg';
+import profile from '../assets/images/foto.jpg';
 
 import Locate from '../assets/icons/Locate';
 import Linkedin from '../assets/icons/Linkedin';
@@ -27,6 +27,7 @@ import Mail from '../assets/Mail';
 import User from '../assets/User';
 import Rocket from '../assets/Rocket';
 import OpenNew from '../assets/OpenNew';
+import Cv from '../assets/Cv';
 
 import Loader from '../Components/Loader';
 import Delete from '../Components/Delete';
@@ -37,6 +38,7 @@ import RedColsi from '../assets/images/RedColsi.png';
 // Docs
 import DocSENA from '../assets/Docs/MANUEL_ESTEBAN_ERAZO_MEDINA.pdf';
 import DocRED from '../assets/Docs/REDCOLSI.pdf';
+import CV from '../assets/Docs/CV.pdf';
 
 // Icons Like this
 import Github from '../assets/icons/Github';
@@ -123,6 +125,10 @@ function Base() {
 
   const toggleSwitch = () => {
     setLanguage(language === 'es' ? 'en' : 'es');
+  };
+
+  const downloadCv = () => {
+    window.open(CV);
   };
 
   const [showPokedex, setShowPokedex] = useState(false);
@@ -302,6 +308,16 @@ function Base() {
                 </a>
                 <button type="button" onClick={setShowMail}>
                   <Email className="fill-white transition duration-300 ease-in-out hover:fill-zinc-300" />
+                </button>
+              </span>
+              <span className="flex flex-col">
+                <button
+                  type="button"
+                  onClick={downloadCv}
+                  className="flex flex-row gap-3 items-center justify-center xl:w-44 w-full text-zinc-300 font-bold tracking-wide text-sm border border-zinc-600 rounded-full p-2 bg-[#3A3A3A] hover:bg-[#484848] hover:text-white transition duration-300 ease-in-out"
+                >
+                  {/* <Cv className="w-4 h-4 fill-zinc-300" /> */}
+                  {i18next.t('cv')}
                 </button>
               </span>
             </article>

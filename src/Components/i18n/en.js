@@ -113,5 +113,6 @@ export const eng = {
   message: 'Message',
   send: 'Send',
   // modalDocs
-  md: 'Document preview'
+  md: 'Document preview',
+  cv: 'Download CV'
 };

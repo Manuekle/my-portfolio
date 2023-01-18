@@ -114,5 +114,6 @@ export const esp = {
   message: 'Mensaje',
   send: 'Enviar',
   // modalDocs
-  md: 'Vista previa del documento'
+  md: 'Vista previa del documento',
+  cv: 'Descargar CV'
 };
