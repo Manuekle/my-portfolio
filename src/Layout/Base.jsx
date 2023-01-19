@@ -392,6 +392,12 @@ function Base() {
                   </h1>
                   <p className="text-[#9B9B9B] text-sm">{i18next.t('tag4')}</p>
                 </span>
+                <span className="flex flex-col gap-1">
+                  <h1 className="text-white text-sm underline">
+                    #{i18next.t('cars')}
+                  </h1>
+                  <p className="text-[#9B9B9B] text-sm">{i18next.t('tag5')}</p>
+                </span>
               </div>
             </section>
             <section className="col-span-2 xl:col-span-1">

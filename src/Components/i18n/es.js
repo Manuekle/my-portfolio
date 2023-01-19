@@ -28,6 +28,8 @@ export const esp = {
   tag3: 'Me gusta cocinar, ver videos de cocina y aprender nuevas recetas.',
   football: 'Fútbol',
   tag4: 'Soy un apasionado del futbol, me gusta verlo y jugarlo, mi equipo favorito es el FC Barcelona.',
+  cars: 'Automóviles',
+  tag5: 'Me encantan los autos, me gusta ver videos de autos y aprender sobre ellos, mi auto favorito es el Toyota Supra A80.',
   // ...
   technologies: 'Tecnologías Y Herramientas',
   t1: 'Prefiero trabajar con',

@@ -28,6 +28,8 @@ export const eng = {
   tag3: 'I like cooking, watching cooking videos and learning new recipes.',
   football: 'Football',
   tag4: 'I am passionate about football, I like to watch and play it, my favorite team is FC Barcelona.',
+  cars: 'Cars',
+  tag5: 'I love cars, I like to watch car videos and learn about them, my favorite car is Toyota Supra A80.',
   // ...
   technologies: 'Technologies And Tools',
   t1: 'I prefer to work with',
