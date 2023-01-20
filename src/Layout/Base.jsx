@@ -293,14 +293,14 @@ function Base() {
                   <Github className="w-5 h-5 fill-white transition duration-300 ease-in-out hover:fill-zinc-300" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/manuel-esteban-erazo-medina-686a69226/"
+                  href="https://www.linkedin.com/in/manuekle/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Linkedin className="w-5 h-5 fill-white transition duration-300 ease-in-out hover:fill-zinc-300" />
                 </a>
                 <a
-                  href="https://twitter.com/Manu3L3l"
+                  href="https://twitter.com/manu_jsx"
                   target="_blank"
                   rel="noreferrer"
                 >
