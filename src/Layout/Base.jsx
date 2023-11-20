@@ -13,7 +13,7 @@ import emailjs from '@emailjs/browser';
 import { eng } from '../Components/i18n/en';
 import { esp } from '../Components/i18n/es';
 
-import profile from '../assets/images/foto.jpg';
+import profile from '../assets/images/foto.jpeg';
 
 import Locate from '../assets/icons/Locate';
 import Linkedin from '../assets/icons/Linkedin';
