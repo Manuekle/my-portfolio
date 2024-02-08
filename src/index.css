@@ -4,9 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist';
+  src: url('./assets/fonts/Geist-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-body {
+/* body {
   font-family: 'Inter', sans-serif !important;
+} */
+body {
+  margin: 0;
+  font-family: 'Geist', 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* scrollbar dark */
