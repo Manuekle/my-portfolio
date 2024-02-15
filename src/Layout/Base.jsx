@@ -103,6 +103,9 @@ import Vercel from '../assets/icons/Vercel';
 import Translate from '../assets/Translate';
 // import Mysql from '../assets/icons/Mysql';
 
+import Valentine from '../assets/images/valentine.png';
+import Geo from '../assets/images/geo.png';
+
 function Base() {
   const [formData, setFormData] = useState(false);
 
@@ -211,13 +214,10 @@ function Base() {
     'https://repository-images.githubusercontent.com/393506201/fb2ead61-3333-4b3d-9ff3-b2609cea784d';
 
   const pishing =
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiJFygUDODKtz6vnhIz3GgBiIts8_POlqBfw&usqp=CAU';
+    'https://global.tiffin.edu/img/article/spear-phishing-que-es-y-como-protegerse.webp';
 
   const sena =
     'https://lostramites.com.co/wp-content/uploads/logo-sena-fondo-naranja-300x300.jpg';
-
-  const qatar =
-    'https://e.rpp-noticias.io/normal/2022/10/15/141514_1330437.jpg';
 
   const weather =
     'https://miro.medium.com/max/1400/1*zeNkd44fybuuMSbz52NJvQ.png';
@@ -898,7 +898,7 @@ function Base() {
               {i18next.t('projects')}
             </h1>
             <section className="grid grid-cols-3 gap-4 w-full">
-              <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
+              {/* <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
                 <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
                   <img
                     src={sensor}
@@ -947,9 +947,9 @@ function Base() {
                     <Raspberry className="w-5 h-5 fill-zinc-300" />
                   </span>
                 </div>
-              </div>
+              </div> */}
               <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
-                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
+                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-full">
                   <img
                     src={pokemon}
                     alt="pokemon"
@@ -980,28 +980,32 @@ function Base() {
                     </span>
                   </motion.div>
                 </figure>
-                <h1 className="text-sm xl:text-md font-bold text-white">
-                  <a
-                    href="https://pokedex-apiv2.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
-                  >
-                    {i18next.t('p3')}
-                  </a>
-                </h1>
-                <p className="text-sm text-zinc-300">{i18next.t('p4')}</p>
-                <div>
-                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
-                  <span className="flex flex-row gap-4 mt-2">
-                    <Javascript className="w-5 h-5 fill-zinc-300" />
-                    <ReactIcon className="w-5 h-5 fill-zinc-300" />
-                    <Tailwind className="w-5 h-5 fill-zinc-300" />
-                    <Vercel className="w-5 h-5 fill-zinc-300" />
-                  </span>
-                </div>
+                <span className="flex flex-col gap-1 justify-between items-start h-full">
+                  <article className="flex flex-col gap-1">
+                    <h1 className="text-sm xl:text-md font-bold text-white">
+                      <a
+                        href="https://pokedex-apiv2.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
+                      >
+                        {i18next.t('p3')}
+                      </a>
+                    </h1>
+                    <p className="text-sm text-zinc-300">{i18next.t('p4')}</p>
+                  </article>
+                  <div>
+                    <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
+                    <span className="flex flex-row gap-4 mt-2">
+                      <Javascript className="w-5 h-5 fill-zinc-300" />
+                      <ReactIcon className="w-5 h-5 fill-zinc-300" />
+                      <Tailwind className="w-5 h-5 fill-zinc-300" />
+                      <Vercel className="w-5 h-5 fill-zinc-300" />
+                    </span>
+                  </div>
+                </span>
               </div>
-              <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
+              {/* <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
                 <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
                   <img
                     src={country}
@@ -1106,12 +1110,12 @@ function Base() {
                     <Vercel className="w-5 h-5 fill-zinc-300" />
                   </span>
                 </div>
-              </div>
+              </div> */}
               <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
-                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
+                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-full">
                   <img
-                    src={qatar}
-                    alt="qatar"
+                    src={Valentine}
+                    alt="valentine"
                     className="object-cover w-full h-full"
                   />
                   <motion.div
@@ -1122,51 +1126,55 @@ function Base() {
                     transition={{ duration: 0.5 }}
                   >
                     <span className="absolute w-full h-full top-0 right-0 flex flex-row gap-2 justify-center items-center">
-                      {/* <a
-                        href="https://github.com/Manuekle/phishing"
+                      <a
+                        href="https://github.com/Manuekle/my-valentine"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <Github className="w-4 h-4 fill-white hover:fill-zinc-300" />
                       </a>
                       <a
-                        href="https://phishing-fup.vercel.app/"
+                        href="https://will-you-be-my-valentine-plsss.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <OpenNew className="fill-white hover:fill-zinc-300" />
-                      </a> */}
-                      <h1 className="text-white text-sm">
+                      </a>
+                      {/* <h1 className="text-white text-sm">
                         {i18next.t('soon')}
-                      </h1>
+                      </h1> */}
                     </span>
                   </motion.div>
                 </figure>
-                <h1 className="text-sm xl:text-md font-bold text-white">
-                  <a
-                    href=""
-                    // target="_blank"
-                    rel="noreferrer"
-                    className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
-                  >
-                    {i18next.t('p9')}
-                  </a>
-                </h1>
-                <p className="text-sm text-zinc-300">{i18next.t('p10')}</p>
-                <div>
-                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
-                  <span className="flex flex-row gap-4 mt-2">
-                    <Javascript className="w-5 h-5 fill-zinc-300" />
-                    <ReactIcon className="w-5 h-5 fill-zinc-300" />
-                    <Tailwind className="w-5 h-5 fill-zinc-300" />
-                    <Vercel className="w-5 h-5 fill-zinc-300" />
-                  </span>
-                </div>
+                <span className="flex flex-col gap-1 justify-between items-start h-full">
+                  <article className="flex flex-col gap-1">
+                    <h1 className="text-sm xl:text-md font-bold text-white">
+                      <a
+                        href=""
+                        // target="_blank"
+                        rel="noreferrer"
+                        className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
+                      >
+                        {i18next.t('p9')}
+                      </a>
+                    </h1>
+                    <p className="text-sm text-zinc-300">{i18next.t('p10')}</p>
+                  </article>
+                  <div>
+                    <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
+                    <span className="flex flex-row gap-4 mt-2">
+                      <Javascript className="w-5 h-5 fill-zinc-300" />
+                      <ReactIcon className="w-5 h-5 fill-zinc-300" />
+                      <Tailwind className="w-5 h-5 fill-zinc-300" />
+                      <Vercel className="w-5 h-5 fill-zinc-300" />
+                    </span>
+                  </div>
+                </span>
               </div>
               <div className="col-span-3 xl:col-span-1 flex flex-col gap-3 border border-zinc-600 rounded-lg p-4">
-                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-44">
+                <figure className="relative bg-[#242424] rounded-md overflow-hidden border border-zinc-600 h-full">
                   <img
-                    src={weather}
+                    src={Geo}
                     alt="weather"
                     className="object-cover w-full h-full"
                   />
@@ -1198,26 +1206,30 @@ function Base() {
                     </span>
                   </motion.div>
                 </figure>
-                <h1 className="text-sm xl:text-md font-bold text-white">
-                  <a
-                    href="https://geoweather.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
-                  >
-                    {i18next.t('p11')}
-                  </a>
-                </h1>
-                <p className="text-sm text-zinc-300">{i18next.t('p12')}</p>
-                <div>
-                  <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
-                  <span className="flex flex-row gap-4 mt-2">
-                    <Javascript className="w-5 h-5 fill-zinc-300" />
-                    <ReactIcon className="w-5 h-5 fill-zinc-300" />
-                    <Tailwind className="w-5 h-5 fill-zinc-300" />
-                    <Vercel className="w-5 h-5 fill-zinc-300" />
-                  </span>
-                </div>
+                <span className="flex flex-col gap-1 justify-between items-start h-full">
+                  <article className="flex flex-col gap-1">
+                    <h1 className="text-sm xl:text-md font-bold text-white">
+                      <a
+                        href="https://geoweather.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="transition duration-300 ease-in-out hover:underline hover:text-zinc-300"
+                      >
+                        {i18next.t('p11')}
+                      </a>
+                    </h1>
+                    <p className="text-sm text-zinc-300">{i18next.t('p12')}</p>
+                  </article>
+                  <div>
+                    <h1 className="text-sm text-white">{i18next.t('pt')}</h1>
+                    <span className="flex flex-row gap-4 mt-2">
+                      <Javascript className="w-5 h-5 fill-zinc-300" />
+                      <ReactIcon className="w-5 h-5 fill-zinc-300" />
+                      <Tailwind className="w-5 h-5 fill-zinc-300" />
+                      <Vercel className="w-5 h-5 fill-zinc-300" />
+                    </span>
+                  </div>
+                </span>
               </div>
             </section>
             <div className="flex justify-center mt-4">
